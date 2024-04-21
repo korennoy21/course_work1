@@ -1,5 +1,5 @@
 import json
-
+import datetime
 
 def get_json(file_name):
     """Читает файл json"""
@@ -24,3 +24,9 @@ def sort_dates(list_):
 def revers(list_):
     """Разворачивает список"""
     return list_[::-1]
+
+
+def format_date(value):
+    """Возвращает дату"""
+    date = datetime.datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+    return date.strftime('%d.%m.%Y')
