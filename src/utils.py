@@ -15,6 +15,12 @@ def sort_status(json_list, state):
             result.append(i)
     return result
 
+
 def sort_dates(list_):
     """cортирует по датам"""
     return sorted(list_, key=lambda x: x['date'])
+
+
+def revers(list_):
+    """Разворачивает список"""
+    return list_[::-1]
